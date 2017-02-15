@@ -1,7 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include<conio.h>
+#include<windows.h>
 int a,b,c,d,jieguo,daan,i=0,j=0; 
+bool english=0; 
 struct fenshu
 {
 	int fenzi;
@@ -18,7 +21,7 @@ int fun(int m,int n)
 	}
 	return m;
 }
-void jiafa()                         //¼Ó·¨º¯Êı 
+void jiafa()                         //åŠ æ³•å‡½æ•° 
 {
 	srand(time(0));
 	a=rand()%10;
@@ -27,13 +30,27 @@ void jiafa()                         //¼Ó·¨º¯Êı
 	daan=a+b; 
 	scanf("%d",&jieguo);
 	if(daan==jieguo)
-	{printf("ÕıÈ·\n");
+	{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 	i++;}
 	else
-	{printf("´íÎó\n");
+	{if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 	j++;}
 }  
-void jianfa()                         //¼õ·¨º¯Êı 
+void jianfa()                         //å‡æ³•å‡½æ•° 
 {
 	srand(time(0));
 	a=rand()%10;
@@ -42,13 +59,27 @@ void jianfa()                         //¼õ·¨º¯Êı
 	daan=a-b; 
 	scanf("%d",&jieguo);
 	if(daan==jieguo)
-	{printf("ÕıÈ·\n");
+	{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 	i++;}
 	else
-	{printf("´íÎó\n");
+	{if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 	j++;}
 }  
-void chengfa()                       //³Ë·¨º¯Êı 
+void chengfa()                       //ä¹˜æ³•å‡½æ•° 
 {
 	srand(time(0));
 	a=rand()%10;
@@ -57,29 +88,179 @@ void chengfa()                       //³Ë·¨º¯Êı
 	daan=a*b; 
 	scanf("%d",&jieguo);
 	if(daan==jieguo)
-	{printf("ÕıÈ·\n");
+	{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 	i++;}
 	else
-	{printf("´íÎó\n");
+	{if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 	j++;}
 }  
-void chufa()                         //³ı·¨º¯Êı 
+void chufa()                         //é™¤æ³•å‡½æ•° 
 {
 	float h,s;
 	srand(time(0));
 	a=rand()%10;
 	b=rand()%10;
-	printf("%d¡Â%d=",a,b);
+	printf("%dÃ·%d=",a,b);
 	h=((int)(((float)a/b)*100+0.5))/100.0;
 	scanf("%f",&s);
 	if(h==s)
-	{printf("ÕıÈ·\n");
+	{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 	i++;}
 	else
-	{printf("´íÎó\n");
+	{if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 	j++;}
 }  
-void fenshujiafa()                    //·ÖÊı¼Ó·¨ 
+void hunhe1()                      //æ··åˆè¿ç®—æ¨¡æ¿1 
+{
+	srand(time(0));
+	a=rand()%10;
+	b=rand()%10;
+	c=rand()%10;
+	d=rand()%10;
+	printf("(%d+%d)*(%d-%d)=",a,b,c,d);
+	daan=(a+b)*(c-d); 
+	scanf("%d",&jieguo);
+	if(daan==jieguo)
+	{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
+	i++;}
+	else
+	{if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
+	j++;}
+}  
+void hunhe2()                       //æ··åˆè¿ç®—æ¨¡æ¿2 
+{
+	srand(time(0));
+	a=rand()%10;
+	b=rand()%10;
+	c=rand()%10;
+	d=rand()%10;
+	printf("(%d+%d)-(%d-%d)=",a,b,c,d);
+	daan=(a+b)-(c-d); 
+	scanf("%d",&jieguo);
+	if(daan==jieguo)
+	{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
+	i++;}
+	else
+	{if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
+	j++;}
+}  
+void hunhe3()                         //æ··åˆè¿ç®—æ¨¡æ¿3 
+{
+	srand(time(0));
+	a=rand()%10;
+	b=rand()%10;
+	c=rand()%10;
+	printf("%d+%d*%d=",a,b,c);
+	daan=a+b*c; 
+	scanf("%d",&jieguo);
+	if(daan==jieguo)
+	{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
+	i++;}
+	else
+	{if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
+	j++;} 
+}  
+void hunhe4()                    //æ··åˆè¿ç®—æ¨¡æ¿4 
+{
+	srand(time(0));
+	a=rand()%10;
+	b=rand()%10;
+	c=rand()%10;
+	printf("%d+%d-%d=",a,b,c);
+	daan=a+b-c; 
+	scanf("%d",&jieguo);
+	if(daan==jieguo)
+	{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
+	i++;}
+	else
+	{if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
+	j++;}
+}  
+void fenshujiafa()                    //åˆ†æ•°åŠ æ³• 
 {
 	int q,w,e,result1,result2,qq,ww;
 	struct fenshu x,y;
@@ -97,12 +278,26 @@ void fenshujiafa()                    //·ÖÊı¼Ó·¨
 		result1=w/e;
 		scanf("%d",&qq);
 		if(qq==result1)
-		{printf("ÕıÈ·£¡\n");
+		{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 		i++;
 		}
 		else
 		{
-			printf("´íÎó£¡\n");
+		if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 			j++;
 		}
 	}
@@ -113,18 +308,32 @@ void fenshujiafa()                    //·ÖÊı¼Ó·¨
 		scanf("%d %d",&qq,&ww);
 		if(qq==result1&&ww==result2)
 		{
-			printf("ÕıÈ·£¡\n");
+			if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 			i++; 
 		}
 		else
 		{
-			printf("´íÎó£¡\n");
+		if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 			j++;
 		}
 	}
 
 }
-void fenshujianfa()                   //·ÖÊı¼õ·¨ 
+void fenshujianfa()                   //åˆ†æ•°å‡æ³• 
 {
 	int q,w,e,result1,result2,qq,ww;
 	struct fenshu x,y;
@@ -142,12 +351,26 @@ void fenshujianfa()                   //·ÖÊı¼õ·¨
 		result1=w/e;
 		scanf("%d",&qq);
 		if(qq==result1)
-		{printf("ÕıÈ·£¡\n");
+		{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 		i++;
 		}
 		else
 		{
-			printf("´íÎó£¡\n");
+			if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 			j++;
 		}
 	}
@@ -158,18 +381,32 @@ void fenshujianfa()                   //·ÖÊı¼õ·¨
 		scanf("%d %d",&qq,&ww);
 		if(qq==result1&&ww==result2)
 		{
-			printf("ÕıÈ·£¡\n");
+			if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 			i++; 
 		}
 		else
 		{
-			printf("´íÎó£¡\n");
+			if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 			j++;
 		}
 	}
 
 }
-void fenshuchengfa()                    //·ÖÊı³Ë·¨ 
+void fenshuchengfa()                    //åˆ†æ•°ä¹˜æ³• 
 {
 	int q,w,e,result1,result2,qq,ww;
 	struct fenshu x,y;
@@ -187,12 +424,26 @@ void fenshuchengfa()                    //·ÖÊı³Ë·¨
 		result1=w/e;
 		scanf("%d",&qq);
 		if(qq==result1)
-		{printf("ÕıÈ·£¡\n");
+		{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 		i++;
 		}
 		else
 		{
-			printf("´íÎó£¡\n");
+			if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 			j++;
 		}
 	}
@@ -203,18 +454,32 @@ void fenshuchengfa()                    //·ÖÊı³Ë·¨
 		scanf("%d %d",&qq,&ww);
 		if(qq==result1&&ww==result2)
 		{
-			printf("ÕıÈ·£¡\n");
+			if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 			i++; 
 		}
 		else
 		{
-			printf("´íÎó£¡\n");
+			if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 			j++;
 		}
 	}
 
 }
-void fenshuchufa()                      //·ÖÊı³ı·¨ 
+void fenshuchufa()                      //åˆ†æ•°é™¤æ³• 
 {
 	int q,w,e,result1,result2,qq,ww;
 	struct fenshu x,y;
@@ -223,7 +488,7 @@ void fenshuchufa()                      //·ÖÊı³ı·¨
 	x.fenmu=rand()%10+1;
 	y.fenzi=rand()%10+1;
 	y.fenmu=rand()%10+1;
-	printf("%d/%d¡Â%d/%d=",x.fenzi,x.fenmu,y.fenzi,y.fenmu); 
+	printf("%d/%dÃ·%d/%d=",x.fenzi,x.fenmu,y.fenzi,y.fenmu); 
 	q=x.fenmu*y.fenzi;        //fenmu
 	w=x.fenzi*y.fenmu;          //fenzi 
 	e=fun(q,w);
@@ -232,12 +497,26 @@ void fenshuchufa()                      //·ÖÊı³ı·¨
 		result1=w/e;
 		scanf("%d",&qq);
 		if(qq==result1)
-		{printf("ÕıÈ·£¡\n");
+		{if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 		i++;
 		}
 		else
 		{
-			printf("´íÎó£¡\n");
+			if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 			j++;
 		}
 	}
@@ -248,15 +527,134 @@ void fenshuchufa()                      //·ÖÊı³ı·¨
 		scanf("%d %d",&qq,&ww);
 		if(qq==result1&&ww==result2)
 		{
-			printf("ÕıÈ·£¡\n");
+			if(english==0)
+	{
+		printf("æ­£ç¡®ï¼\n");
+	}
+	else
+	{
+		printf("RIGHT!\n");
+	}
 			i++; 
 		}
 		else
 		{
-			printf("´íÎó£¡\n");
+			if(english==0)
+	{
+		printf("é”™è¯¯ï¼\n");
+	}
+	else
+	{
+		printf("WRONG!\n");
+	}
 			j++;
 		}
 	}
 
 }
-
+int main()
+{
+	int e,k;
+	int nSelect=MessageBox(NULL,TEXT("æ‚¨å¥½,å•å‡»ç¡®å®šé€‰æ‹©ä¸­æ–‡ï¼Œclick cancle switch to English"),TEXT("è¯­è¨€è®¾ç½®"),MB_OKCANCEL);
+	if(nSelect==IDOK)
+	{
+	printf("æ¬¢è¿ä½¿ç”¨å£ç®—å¿ƒç®—å¤©å¤©ç»ƒï¼\nè¾“å…¥â€œeâ€æ¥åœæ­¢ã€‚\nè¯´æ˜ï¼šé™¤æ³•ä¿ç•™ä¸¤ä½å°æ•°,åˆ†æ•°è¿ç®—ä¾æ¬¡è¾“å…¥åˆ†å­åˆ†æ¯ä¸­é—´ç”¨ç©ºæ ¼éš”å¼€ã€‚é™¤å·ä¸º'Ã·',åˆ†æ•°çº¿ä¸º'/'ã€‚\n"); 
+	printf("**********************************************\n");
+	for(k=0;1<4;k++)
+	{
+			srand(time(0));
+			e=rand()%12+1;
+			char o;
+		switch (e)
+	{
+		case 1:
+		jiafa();break;
+		case 2:
+		jianfa();break;
+		case 3:
+		chengfa();break;
+		case 4:
+		chufa();break;
+		case 5:
+		hunhe1();break;
+		case 6:
+		hunhe2();break;
+		case 7:
+		hunhe3();break;
+		case 8:
+		hunhe4();break;
+		case 9:
+		fenshujiafa();break;
+		case 10:
+		fenshujianfa();break;
+		case 11:
+		fenshuchengfa();break;
+		case 12:
+		fenshuchufa();break;
+	}
+	o=getchar();
+	if(o=='e'){
+	
+		printf("**********************************************\n");
+		printf("æœ¬æ¬¡æµ‹è¯•åšå¯¹%dé“é¢˜ç›®\n",i);
+		printf("æœ¬æ¬¡æµ‹è¯•åšé”™%dé“é¢˜ç›®\n\n",j-1);
+		printf("æœ‰å¿—è€…äº‹ç«Ÿæˆï¼\n");
+		break;
+}
+	}
+	
+	
+	}
+	else
+	{
+		english=1;
+		printf("Welcome!\ninputâ€œeâ€to stop.\n Notes:divison operation keep two places of decimal,fraction operation please input numerator than input denominator and space between them.The sign of divisor is 'Ã·',the sign of fraction is'/'.\n"); 
+		printf("**********************************************\n");
+	for(k=0;1<4;k++)
+	{
+			srand(time(0));
+			e=rand()%12+1;
+			char o;
+		switch (e)
+	{
+		case 1:
+		jiafa();break;
+		case 2:
+		jianfa();break;
+		case 3:
+		chengfa();break;
+		case 4:
+		chufa();break;
+		case 5:
+		hunhe1();break;
+		case 6:
+		hunhe2();break;
+		case 7:
+		hunhe3();break;
+		case 8:
+		hunhe4();break;
+		case 9:
+		fenshujiafa();break;
+		case 10:
+		fenshujianfa();break;
+		case 11:
+		fenshuchengfa();break;
+		case 12:
+		fenshuchufa();break;
+	}
+	o=getchar();
+	if(o=='e'){
+	
+		printf("**********************************************\n");
+		printf("the number of right answer is %d in this quiz\n",i);
+		printf("the number of wrong answer is %d in this quiz\n\n",j-1);
+		printf("where there is a will there is a wayï¼\n"); 
+		break;
+}
+	}
+	 
+	}
+	 getch();
+	 return 0;  
+	
+ } 
